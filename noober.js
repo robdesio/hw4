@@ -22,23 +22,27 @@ window.addEventListener('DOMContentLoaded', async function() {
       if (nooberRide.purpleRequested == true) {
         riderService = `Noober Purple`
         borderType = `border-4 border-purple-500 p-4 my-4 text-left`
+        headerType = `inline-block mt-8 px-4 py-2 rounded-xl text-2xl bg-clip-text text-transparent bg-gradient-to-r from-green-500 to-purple-500`
       } 
       else if (nooberRide.purpleRequested == false && nooberRide.numberOfPassengers > 3) {
         riderService = `Noober XL`
         borderType = `border-4 border-red-500 p-4 my-4 text-left`
+        headerType = `inline-block mt-8 px-4 py-2 rounded-xl text-2xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-500 to-purple-500`
       }
       else if (nooberRide.purpleRequested == false && nooberRide.numberOfPassengers <=3 ) {
         riderService = `Noober X`
         borderType = `border-4 border-blue-500 p-4 my-4 text-left`
+        headerType = `inline-block mt-8 px-4 py-2 rounded-xl text-2xl bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-purple-500`
       }
       else {
         riderService = `Error`
         borderType = `border-4 border-yellow-500 p-4 my-4 text-left`
+        headerType = `inline-block mt-8 px-4 py-2 rounded-xl text-2xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500`
       }
 
   // Insert HTML into the interface
   nooberList.insertAdjacentHTML(`beforeend`, `
-  <h1 class="inline-block mt-8 px-4 py-2 rounded-xl text-2xl bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-500">
+  <h1 class="${headerType}">
       <i class="fas fa-car-side"></i>
       <span>${riderService}</span>
     </h1>
